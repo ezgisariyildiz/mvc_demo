@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+>
 <head>
     <title>Items</title>
 </head>
@@ -19,8 +19,9 @@
     </tr>
     <tr th:each="item : ${items}">
         <td>
-            <form th:action="@{/items/}" + "${item.id}" th:method="delete">
-                <button type="submit">Delete</button>
+            <form th:action="@{/items/}" +
+            "${item.id}" th:method="delete">
+            <button type="submit">Delete</button>
             </form>
         </td>
         <td th:text="${item.inventoryCode}">Item code will appear here</td>

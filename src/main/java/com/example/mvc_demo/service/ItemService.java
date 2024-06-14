@@ -11,5 +11,8 @@ public interface ItemService {
     void deleteItemById(long id);
     void addItem(ItemAddForm form);
 
+    Item getItemById(long id);
+    Item assignItem(String username, long itemId);
+
 }
 
